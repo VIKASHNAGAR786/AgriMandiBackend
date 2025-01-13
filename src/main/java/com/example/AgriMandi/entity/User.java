@@ -26,13 +26,17 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    @ManyToMany
-    @JoinTable(
-      name = "user_roles", 
-      joinColumns = @JoinColumn(name = "user_id"), 
-      inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private Set<Role> roles = new HashSet<>();
+//    @ManyToMany
+//    @JoinTable(
+//      name = "user_roles", 
+//      joinColumns = @JoinColumn(name = "user_id"), 
+//      inverseJoinColumns = @JoinColumn(name = "role_id"))
+//    private Set<Role> roles = new HashSet<>();
 
+    @Column(nullable = false)
+    private String role;
+    
+    
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Product> products;
     
@@ -74,12 +78,19 @@ public class User {
         this.password = password;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
+//    public Set<Role> getRoles() {
+//        return roles;
+//    }
+//
+//
+//    public void setRole(Set<Role> role) {
+//        this.roles = role;
+//    }
+    public String getRole() {
+        return role;
     }
 
-
-    public void setRole(Set<Role> role) {
-        this.roles = role;
+    public void setRole(String role) {
+        this.role = role;
     }
 }
