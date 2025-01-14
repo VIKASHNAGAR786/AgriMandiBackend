@@ -1,10 +1,8 @@
 package com.example.AgriMandi.entity;
 
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
+import java.util.List;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -78,14 +76,7 @@ public class User {
         this.password = password;
     }
 
-//    public Set<Role> getRoles() {
-//        return roles;
-//    }
-//
-//
-//    public void setRole(Set<Role> role) {
-//        this.roles = role;
-//    }
+
     public String getRole() {
         return role;
     }

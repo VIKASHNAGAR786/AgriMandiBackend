@@ -1,14 +1,8 @@
 package com.example.AgriMandi.service;
 
 import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureAlgorithm;
-import io.jsonwebtoken.SignatureException;
-
-import java.security.SecureRandom;
-import java.util.Base64;
 import java.util.Date;
 
 public class JwtUtil {
